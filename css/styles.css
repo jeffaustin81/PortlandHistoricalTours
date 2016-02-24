@@ -48,16 +48,16 @@ header .logo {
   height: 100px;
   width: 100px;
   margin: 10px;
-  -webkit-filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
-  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
 }
 header .title-header {
   font-size: 1.55em;
   font-weight: 300;
   padding-bottom: 10px;
   margin: 0;
-  -webkit-filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
-  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
 }
 header .title-header a {
   text-decoration: none;
@@ -93,6 +93,7 @@ nav ul a:hover {
 }
 nav ul .active {
   font-weight: 600;
+  transition: font-weight 0.08s;
 }
 
 /*/////////////////////////////////////////////////////////////////////////
@@ -137,29 +138,29 @@ THIS SECTION INCLUDES CHILDREN OF COLUMNS CLASS
 .columns .small-tour-image {
   height: 200px;
   width: 200px;
-  -webkit-filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
-  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
 }
 .columns .col {
   margin-bottom: 10px;
 }
 .columns .col-1 {
   border: solid 1px #FFCDC9;
-  border-radius: 1em;
+  border-radius: 1.25em;
   color: #2f4f4f;
   padding: 3px;
   transition: border 0.08s, padding 0.08s;
 }
 .columns .col-2 {
   border: solid 1px #CC5A78;
-  border-radius: 1em;
+  border-radius: 1.25em;
   color: #2f4f4f;
   padding: 3px;
   transition: border 0.08s, padding 0.08s;
 }
 .columns .col-3 {
   border: solid 1px #3CD3AD;
-  border-radius: 1em;
+  border-radius: 1.25em;
   color: #2f4f4f;
   padding: 3px;
   transition: border 0.08s, padding 0.08s;

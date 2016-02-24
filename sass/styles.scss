@@ -5,10 +5,10 @@ $downtown-color: #FFCDC9;
 $growth-color: #CC5A78;
 $text-color: #FFF;
 $dark-color: #2f4f4f;
-$column-border-radius: 1em;
+$column-border-radius: 1.25em;
 $font-family: 'Open Sans', sans-serif;
 $trans: .08s;
-$drop-shadow: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
+$drop-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
 
 @mixin col-styling($color) {
   border: solid 1px $color;
@@ -119,6 +119,7 @@ nav {
     }
     .active {
       font-weight: 600;
+      transition: font-weight $trans;
     }
   }
 }

@@ -146,21 +146,21 @@ THIS SECTION INCLUDES CHILDREN OF COLUMNS CLASS
 }
 .columns .col-1 {
   border: solid 1px #FFCDC9;
-  border-radius: 1.25em;
+  border-radius: 0.75em;
   color: #2f4f4f;
   padding: 3px;
   transition: border 0.08s, padding 0.08s;
 }
 .columns .col-2 {
   border: solid 1px #CC5A78;
-  border-radius: 1.25em;
+  border-radius: 0.75em;
   color: #2f4f4f;
   padding: 3px;
   transition: border 0.08s, padding 0.08s;
 }
 .columns .col-3 {
   border: solid 1px #3CD3AD;
-  border-radius: 1.25em;
+  border-radius: 0.75em;
   color: #2f4f4f;
   padding: 3px;
   transition: border 0.08s, padding 0.08s;

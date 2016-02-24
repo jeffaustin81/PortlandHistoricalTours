@@ -1,0 +1,252 @@
+$primary-color: #157899;
+$secondary-color: #4CB8C4;
+$landmark-color: #3CD3AD;
+$downtown-color: #FFCDC9;
+$growth-color: #CC5A78;
+$text-color: #FFF;
+$dark-color: #2f4f4f;
+$column-border-radius: 1em;
+$font-family: 'Open Sans', sans-serif;
+$trans: .08s;
+$drop-shadow: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
+
+@mixin col-styling($color) {
+  border: solid 1px $color;
+  border-radius: $column-border-radius;
+  color: $dark-color;
+  padding: 3px;
+  transition: border $trans, padding $trans;
+}
+@mixin col-hover($color) {
+  border: solid 4px $color;
+  padding: 0;
+  .sub-header{
+    font-weight: 600;
+  }
+}
+
+/*
+STYLES ARE ORGANIZED BY SECTIONS: GLOBALS, WRAPPER DIV, HEADER, NAV, MAIN, MAIN.COLUMNS, FOOTER, MEDIA QUERIES. ALL INITIAL STYLES ARE DONE WITH A MOBILE FIRST APPROACH, MEDIA QUERIES CAN BE FOUND AFTER THE INITIAL STYLES SECTION OF FOOTER NEAR BOTTOM OF DOCUMENT
+*/
+
+/*
+////////////////////////////////////////////////////////////////
+  GLOBALS | THESE STYLES FOCUS ON STYLES FOR THE ENTIRE DOCUMENT
+///////////////////////////////////////////////////////////////
+*/
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+
+/*////////////////////////////////////////////////////////////////////
+WRAPPER | IS THE MAIN DIV THAT WRAPS ALL CONTENT EXCLUDING THE FOOTER
+////////////////////////////////////////////////////////////////////*/
+
+.wrapper {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px;
+}
+.wrapper:after {
+  content: "";
+  display: block;
+}
+
+.wrapper {
+  font-family: $font-family;
+}
+
+/*///////////////////////////////////////////////////////////////
+HEADER | THESE STYLES ARE FOR THE HEADER AND CHILDREN OF HEADER
+//////////////////////////////////////////////////////////////*/
+
+header {
+  background: $secondary-color; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, $secondary-color, $landmark-color);
+  background: linear-gradient(to left, $secondary-color, $landmark-color);
+  color: $text-color;
+  text-align: center;
+  .logo {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    filter: $drop-shadow;
+  }
+  .title-header {
+    font-size: 1.55em;
+    font-weight: 300;
+    padding-bottom: 10px;
+    margin: 0;
+    filter: $drop-shadow;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  .bold {
+    font-weight: 700;
+    font-style: italic;
+  }
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////
+NAV | THESE STYLES ARE FOR THE NAV SECTION, FLEX DISPLAY PROPERTIES ADDED IN MEDIA QUERIES SECTION TOWARD END OF STYLE SHEET
+////////////////////////////////////////////////////////////////////////////////////////*/
+
+nav {
+  color: $dark-color;
+  ul {
+    border-bottom: solid 3px $secondary-color;
+    list-style: none;
+    margin: 0 0 15px 0;
+    padding: 15px 0 15px;
+    text-align: center;
+    font-size: 1.35em;
+    li a {
+      text-decoration: none;
+      color: $dark-color;
+      transition: font-weight $trans;
+    }
+    a:hover {
+      font-weight: 600;
+    }
+    .active {
+      font-weight: 600;
+    }
+  }
+}
+
+/*/////////////////////////////////////////////////////////////////////////
+MAIN | MAIN WRAPS THE MAIN CONTENT BELOW THE HEADER AND NAV SECTION
+////////////////////////////////////////////////////////////////////////*/
+
+main {
+  margin: 0 10%;
+  h1 {
+    font-size: 1.30em;
+  }
+  p {
+    font-size: 1.10em;
+    padding-bottom: 20px;
+  }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////
+COLUMNS | CLASS ADDED TO THE MAIN ELEMENT OF HOME PAGE WITH SPECIFIC STYLING FOR COLUMNS STRUCTURE, FLEX DISPLAY PROPERTIES ADDED IN MEDIA QUERIES SECTION TO ACHIEVE COLUMN LAYOUT, THIS SECTION INCLUDES CHILDREN OF COLUMNS CLASS
+///////////////////////////////////////////////////////////////////////////////////////*/
+
+.columns {
+  text-align: center;
+  margin: 0 7%;
+  a {
+    text-decoration: none;
+    color: $dark-color;
+  }
+  p {
+    font-size: 1rem;
+    margin: 15px;
+    padding-bottom: 15px;
+  }
+  .sub-header {
+    font-size: 1.30rem;
+    font-weight: 300;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    transition: font-weight $trans;
+  }
+  .small-tour-image {
+    height: 200px;
+    width: 200px;
+    filter: $drop-shadow;
+  }
+  .col {
+    margin-bottom: 10px;
+  }
+  .col-1 {
+    @include col-styling($downtown-color);
+  }
+  .col-2 {
+    @include col-styling($growth-color);
+  }
+  .col-3 {
+    @include col-styling($landmark-color);
+  }
+  .col-1:hover {
+    @include col-hover($downtown-color);
+  }
+  .col-2:hover {
+    @include col-hover($growth-color);
+  }
+  .col-3:hover {
+    @include col-hover($landmark-color);
+  }
+}
+
+/*////////////////////////////////////////
+FOOTER | THESE STYLES ARE FOR THE FOOTER
+///////////////////////////////////////*/
+
+footer {
+  background-color: $secondary-color;
+  color: $text-color;
+  font-size: .75em;
+  height: 50px;
+  p {
+    padding: 5px 0 0 5px;
+  }
+}
+
+footer, .wrapper:after {
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+/*HEADER*/
+  header {
+    display: flex;
+    .title-header {
+      font-size: 3em;
+      flex: 2;
+      padding-top: 25px;
+    }
+    .logo {
+      flex: initial;
+    }
+  }
+/*NAV*/
+  nav {
+    padding: 0;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding: 0;
+    }
+    li {
+      margin: 20px;
+    }
+  }
+/*MAIN*/
+  main {
+    font-size: 1.55em;
+    p {
+      font-size: 1.30rem;
+    }
+  }
+/*COLUMNS*/
+  .columns {
+    margin:30px;
+    display:flex;
+    flex-direction:row;
+    padding:5px;
+    .col {
+      flex:1 1 auto;
+      text-align:center;
+      margin: 5px;
+    }
+  }
+}

@@ -1,3 +1,11 @@
+/*
+STYLES ARE ORGANIZED BY SECTIONS: GLOBALS, WRAPPER DIV, HEADER, NAV, MAIN, MAIN.COLUMNS, FOOTER, MEDIA QUERIES. ALL INITIAL STYLES ARE DONE WITH A MOBILE FIRST APPROACH, MEDIA QUERIES CAN BE FOUND AFTER THE INITIAL STYLES SECTION OF FOOTER NEAR BOTTOM OF DOCUMENT
+*/
+/*
+////////////////////////////////////////////////////////////////
+  GLOBALS | THESE STYLES FOCUS ON STYLES FOR THE ENTIRE DOCUMENT
+///////////////////////////////////////////////////////////////
+*/
 * {
   margin: 0;
 }
@@ -6,6 +14,9 @@ html, body {
   height: 100%;
 }
 
+/*////////////////////////////////////////////////////////////////////
+WRAPPER | IS THE MAIN DIV THAT WRAPS ALL CONTENT EXCLUDING THE FOOTER
+////////////////////////////////////////////////////////////////////*/
 .wrapper {
   min-height: 100%;
   /* equal to footer height */
@@ -17,30 +28,13 @@ html, body {
   display: block;
 }
 
-footer, .wrapper:after {
-  height: 50px;
-}
-
 .wrapper {
   font-family: "Open Sans", sans-serif;
 }
 
-main {
-  margin: 0 10%;
-}
-main h1 {
-  font-size: 1.30em;
-}
-main p {
-  font-size: 1.10em;
-  padding-bottom: 20px;
-}
-
-.bold {
-  font-weight: 700;
-  font-style: italic;
-}
-
+/*///////////////////////////////////////////////////////////////
+HEADER | THESE STYLES ARE FOR THE HEADER AND CHILDREN OF HEADER
+//////////////////////////////////////////////////////////////*/
 header {
   background: #4CB8C4;
   /* fallback for old browsers */
@@ -48,14 +42,33 @@ header {
   color: #FFF;
   text-align: center;
 }
-
-.title-header {
+header .logo {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  -webkit-filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
+}
+header .title-header {
   font-size: 1.55em;
   font-weight: 300;
   padding-bottom: 10px;
   margin: 0;
+  -webkit-filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
+}
+header .title-header a {
+  text-decoration: none;
+  color: inherit;
+}
+header .bold {
+  font-weight: 700;
+  font-style: italic;
 }
 
+/*////////////////////////////////////////////////////////////////////////////////////////
+NAV | THESE STYLES ARE FOR THE NAV SECTION, FLEX DISPLAY PROPERTIES ADDED IN MEDIA QUERIES SECTION TOWARD END OF STYLE SHEET
+////////////////////////////////////////////////////////////////////////////////////////*/
 nav {
   color: #2f4f4f;
 }
@@ -72,16 +85,30 @@ nav ul li a {
   color: #2f4f4f;
   transition: font-weight 0.08s;
 }
-nav ul li a:hover {
+nav ul a:hover {
+  font-weight: 600;
+}
+nav ul .active {
   font-weight: 600;
 }
 
-.logo {
-  height: 100px;
-  width: 100px;
-  margin: 10px;
+/*/////////////////////////////////////////////////////////////////////////
+MAIN | MAIN WRAPS THE MAIN CONTENT BELOW THE HEADER AND NAV SECTION
+////////////////////////////////////////////////////////////////////////*/
+main {
+  margin: 0 10%;
+}
+main h1 {
+  font-size: 1.30em;
+}
+main p {
+  font-size: 1.10em;
+  padding-bottom: 20px;
 }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////
+COLUMNS | CLASS ADDED TO THE MAIN ELEMENT OF HOME PAGE WITH SPECIFIC STYLING FOR COLUMNS STRUCTURE, FLEX DISPLAY PROPERTIES ADDED IN MEDIA QUERIES SECTION TO ACHIEVE COLUMN LAYOUT, THIS SECTION INCLUDES CHILDREN OF COLUMNS CLASS
+///////////////////////////////////////////////////////////////////////////////////////*/
 .columns {
   text-align: center;
   margin: 0 7%;
@@ -91,11 +118,12 @@ nav ul li a:hover {
   color: #2f4f4f;
 }
 .columns p {
+  font-size: 1rem;
   margin: 15px;
   padding-bottom: 15px;
 }
 .columns .sub-header {
-  font-size: 1.30em;
+  font-size: 1.30rem;
   font-weight: 300;
   padding-top: 15px;
   padding-bottom: 10px;
@@ -104,7 +132,8 @@ nav ul li a:hover {
 .columns .small-tour-image {
   height: 200px;
   width: 200px;
-  box-shadow: 3px 3px 3px;
+  -webkit-filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.7));
 }
 .columns .col {
   margin-bottom: 10px;
@@ -152,6 +181,9 @@ nav ul li a:hover {
   font-weight: 600;
 }
 
+/*////////////////////////////////////////
+FOOTER | THESE STYLES ARE FOR THE FOOTER
+///////////////////////////////////////*/
 footer {
   background-color: #4CB8C4;
   color: #FFF;
@@ -162,7 +194,12 @@ footer p {
   padding: 5px 0 0 5px;
 }
 
+footer, .wrapper:after {
+  height: 50px;
+}
+
 @media (min-width: 768px) {
+  /*HEADER*/
   header {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -181,6 +218,7 @@ footer p {
     flex: initial;
   }
 
+  /*NAV*/
   nav {
     padding: 0;
   }
@@ -200,6 +238,15 @@ footer p {
     margin: 20px;
   }
 
+  /*MAIN*/
+  main {
+    font-size: 1.55em;
+  }
+  main p {
+    font-size: 1.30rem;
+  }
+
+  /*COLUMNS*/
   .columns {
     margin: 30px;
     display: -webkit-flex;
@@ -209,7 +256,6 @@ footer p {
     -ms-flex-direction: row;
     flex-direction: row;
     padding: 5px;
-    /* this */
   }
   .columns .col {
     -webkit-flex: 1 1 auto;
@@ -217,19 +263,5 @@ footer p {
     flex: 1 1 auto;
     text-align: center;
     margin: 5px;
-    /* and that, will result in a 10px gap */
-  }
-
-  main {
-    font-size: 1.55em;
-  }
-  main p {
-    font-size: 1.30rem;
-  }
-}
-@media (min-width: 979px) {
-  columns col img .small-tour-image {
-    height: 250px;
-    width: 250px;
   }
 }

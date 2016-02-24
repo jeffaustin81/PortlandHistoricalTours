@@ -1,8 +1,15 @@
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
-    rename = require('gulp-rename');
+  sass = require('gulp-ruby-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  minifycss = require('gulp-minify-css'),
+  rename = require('gulp-rename');
+  open = require('gulp-open');
+
+
+gulp.task('open', function() {
+  gulp.src('./index.html')
+    .pipe(open());
+});
 
 gulp.task('express', function() {
   var express = require('express');
@@ -52,6 +59,6 @@ gulp.task('watch', function() {
   gulp.watch('css/*.css', notifyLiveReload);
 });
 
-gulp.task('default', ['styles', 'express', 'livereload', 'watch'], function() {
+gulp.task('default', ['styles', 'express', 'open', 'livereload', 'watch'], function() {
 
 });

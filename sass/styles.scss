@@ -6,8 +6,10 @@ $growth-color: #CC5A78;
 $text-color: #FFF;
 $dark-color: #2f4f4f;
 $column-border-radius: 0.75em;
-$font-family: 'Open Sans', sans-serif;
-$trans: .08s;
+$open-sans: 'Open Sans', sans-serif;
+$bold: 700;
+$normal: 400;
+$trans: .1s;
 $drop-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
 
 @mixin col-styling($color) {
@@ -21,7 +23,7 @@ $drop-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
   border: solid 4px $color;
   padding: 0;
   .sub-header{
-    font-weight: 600;
+    font-weight: $bold;
   }
 }
 
@@ -59,7 +61,7 @@ WRAPPER | IS THE MAIN DIV THAT WRAPS ALL CONTENT EXCLUDING THE FOOTER
 }
 
 .wrapper {
-  font-family: $font-family;
+  font-family: $open-sans;
 }
 
 /*///////////////////////////////////////////////////////////////
@@ -80,7 +82,7 @@ header {
   }
   .title-header {
     font-size: 1.55em;
-    font-weight: 300;
+    font-weight: $normal;
     padding-bottom: 10px;
     margin: 0;
     filter: $drop-shadow;
@@ -90,7 +92,7 @@ header {
     }
   }
   .bold {
-    font-weight: 700;
+    font-weight: $bold;
     font-style: italic;
   }
 }
@@ -108,17 +110,17 @@ nav {
     margin: 0 0 15px 0;
     padding: 15px 0 15px;
     text-align: center;
-    font-size: 1.35em;
+    font-size: 1.20em;
     li a {
       text-decoration: none;
       color: $dark-color;
       transition: font-weight $trans;
     }
     a:hover {
-      font-weight: 600;
+      font-weight: $bold;
     }
     .active {
-      font-weight: 600;
+      font-weight: $bold;
       transition: font-weight $trans;
     }
   }
@@ -138,6 +140,18 @@ main {
     padding-bottom: 20px;
   }
 }
+.main {
+  @include col-styling($secondary-color);
+  border-width: 3px;
+  margin-bottom: 15px;
+  h1 {
+    padding: 15px;
+  }
+  p {
+    padding: 15px;
+    font-weight: $normal;
+  }
+}
 
 /*/////////////////////////////////////////////////////////////////////////////////////////
 COLUMNS | CLASS ADDED TO THE MAIN ELEMENT OF HOME PAGE WITH SPECIFIC STYLING FOR COLUMNS
@@ -154,12 +168,13 @@ THIS SECTION INCLUDES CHILDREN OF COLUMNS CLASS
   }
   p {
     font-size: 1rem;
+    font-weight: $normal;
     margin: 15px;
     padding-bottom: 15px;
   }
   .sub-header {
-    font-size: 1.30rem;
-    font-weight: 300;
+    font-size: 1.20rem;
+    font-weight: $normal;
     padding-top: 15px;
     padding-bottom: 10px;
     transition: font-weight $trans;
@@ -167,7 +182,7 @@ THIS SECTION INCLUDES CHILDREN OF COLUMNS CLASS
   .small-tour-image {
     height: 200px;
     width: 200px;
-    filter: $drop-shadow;
+    filter: $drop-shadow sepia(5%);
   }
   .col {
     margin-bottom: 10px;

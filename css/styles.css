@@ -53,7 +53,7 @@ header .logo {
 }
 header .title-header {
   font-size: 1.55em;
-  font-weight: 300;
+  font-weight: 400;
   padding-bottom: 10px;
   margin: 0;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
@@ -81,19 +81,19 @@ nav ul {
   margin: 0 0 15px 0;
   padding: 15px 0 15px;
   text-align: center;
-  font-size: 1.35em;
+  font-size: 1.20em;
 }
 nav ul li a {
   text-decoration: none;
   color: #2f4f4f;
-  transition: font-weight 0.08s;
+  transition: font-weight 0.1s;
 }
 nav ul a:hover {
-  font-weight: 600;
+  font-weight: 700;
 }
 nav ul .active {
-  font-weight: 600;
-  transition: font-weight 0.08s;
+  font-weight: 700;
+  transition: font-weight 0.1s;
 }
 
 /*/////////////////////////////////////////////////////////////////////////
@@ -108,6 +108,23 @@ main h1 {
 main p {
   font-size: 1.10em;
   padding-bottom: 20px;
+}
+
+.main {
+  border: solid 1px #4CB8C4;
+  border-radius: 0.75em;
+  color: #2f4f4f;
+  padding: 3px;
+  transition: border 0.1s, padding 0.1s;
+  border-width: 3px;
+  margin-bottom: 15px;
+}
+.main h1 {
+  padding: 15px;
+}
+.main p {
+  padding: 15px;
+  font-weight: 400;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////
@@ -125,21 +142,22 @@ THIS SECTION INCLUDES CHILDREN OF COLUMNS CLASS
 }
 .columns p {
   font-size: 1rem;
+  font-weight: 400;
   margin: 15px;
   padding-bottom: 15px;
 }
 .columns .sub-header {
-  font-size: 1.30rem;
-  font-weight: 300;
+  font-size: 1.20rem;
+  font-weight: 400;
   padding-top: 15px;
   padding-bottom: 10px;
-  transition: font-weight 0.08s;
+  transition: font-weight 0.1s;
 }
 .columns .small-tour-image {
   height: 200px;
   width: 200px;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4)) sepia(5%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4)) sepia(5%);
 }
 .columns .col {
   margin-bottom: 10px;
@@ -149,42 +167,42 @@ THIS SECTION INCLUDES CHILDREN OF COLUMNS CLASS
   border-radius: 0.75em;
   color: #2f4f4f;
   padding: 3px;
-  transition: border 0.08s, padding 0.08s;
+  transition: border 0.1s, padding 0.1s;
 }
 .columns .col-2 {
   border: solid 1px #CC5A78;
   border-radius: 0.75em;
   color: #2f4f4f;
   padding: 3px;
-  transition: border 0.08s, padding 0.08s;
+  transition: border 0.1s, padding 0.1s;
 }
 .columns .col-3 {
   border: solid 1px #3CD3AD;
   border-radius: 0.75em;
   color: #2f4f4f;
   padding: 3px;
-  transition: border 0.08s, padding 0.08s;
+  transition: border 0.1s, padding 0.1s;
 }
 .columns .col-1:hover {
   border: solid 4px #FFCDC9;
   padding: 0;
 }
 .columns .col-1:hover .sub-header {
-  font-weight: 600;
+  font-weight: 700;
 }
 .columns .col-2:hover {
   border: solid 4px #CC5A78;
   padding: 0;
 }
 .columns .col-2:hover .sub-header {
-  font-weight: 600;
+  font-weight: 700;
 }
 .columns .col-3:hover {
   border: solid 4px #3CD3AD;
   padding: 0;
 }
 .columns .col-3:hover .sub-header {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /*////////////////////////////////////////

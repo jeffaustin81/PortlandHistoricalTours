@@ -20,7 +20,8 @@ $ npm install
 ```
 $ gulp
 ```
-* _Gulp will open the application in your default browser_
+* _Gulp will open the application at localhost:4000 in Chrome_
+* _If you don't have Chrome Firefox will open at localhost:4000_
 * _LiveReload is implemented, so any changes you make to files will refresh the browser on save_
 * _Enjoy!_
 

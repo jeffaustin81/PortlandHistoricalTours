@@ -2,13 +2,22 @@ var gulp = require('gulp'),
   sass = require('gulp-ruby-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   minifycss = require('gulp-minify-css'),
-  rename = require('gulp-rename');
+  rename = require('gulp-rename'),
+  os = require('os'),
   open = require('gulp-open');
 
 
-gulp.task('open', function() {
+var browser = os.platform() === 'linux' ? 'google-chrome' : (
+  os.platform() === 'darwin' ? 'google chrome' : (
+  os.platform() === 'win32' ? 'chrome' : 'firefox'));
+
+gulp.task('app', function() {
+  var options = {
+    uri: 'http://localhost:4000',
+    app: browser
+  };
   gulp.src('./index.html')
-    .pipe(open());
+    .pipe(open(options));
 });
 
 gulp.task('express', function() {
@@ -59,6 +68,6 @@ gulp.task('watch', function() {
   gulp.watch('css/*.css', notifyLiveReload);
 });
 
-gulp.task('default', ['styles', 'express', 'open', 'livereload', 'watch'], function() {
+gulp.task('default', ['styles', 'express', 'app', 'livereload', 'watch'], function() {
 
 });

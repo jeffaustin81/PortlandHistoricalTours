@@ -1,3 +1,5 @@
+/*VARIABLES*/
+
 $primary-color: #157899;
 $secondary-color: #4CB8C4;
 $landmark-color: #3CD3AD;
@@ -7,10 +9,12 @@ $text-color: #FFF;
 $dark-color: #2f4f4f;
 $column-border-radius: 0.75em;
 $open-sans: 'Open Sans', sans-serif;
-$bold: 700;
-$normal: 400;
-$trans: .1s;
+$bold: 600;
+$normal: 300;
+$trans: .15s;
 $drop-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+
+/*MIXINS*/
 
 @mixin col-styling($color) {
   border: solid 1px $color;
@@ -45,6 +49,33 @@ QUERIES CAN BE FOUND AFTER THE INITIAL STYLES SECTION OF FOOTER NEAR BOTTOM OF D
 html, body {
   height: 100%;
 }
+// html {
+//   background: url(../site-assets/Portland_Historical_Tours.jpg) no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
+// body {
+//     position: absolute;
+//     top: 0; bottom: 0; left: 0; right: 0;
+//     height: 100%;
+// }
+// body:before {
+//     content: "";
+//     position: fixed;
+//     background: url(../site-assets/Portland_Historical_Tours.jpg);
+//     background-size: cover;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     z-index: -1; /* Keep the background behind the content */
+//     height: 20%; width: 20%; /* Using Glen Maddern's trick /via @mente */
+//
+//     transform: scale(5);
+//     transform-origin: top left;
+//     filter: grayscale(100%) contrast(500%) opacity(.1);
+// }
 
 /*////////////////////////////////////////////////////////////////////
 WRAPPER | IS THE MAIN DIV THAT WRAPS ALL CONTENT EXCLUDING THE FOOTER
@@ -92,7 +123,7 @@ header {
     }
   }
   .bold {
-    font-weight: $bold;
+    font-weight: 700;
     font-style: italic;
   }
 }
@@ -114,6 +145,7 @@ nav {
     li a {
       text-decoration: none;
       color: $dark-color;
+      font-weight: $normal;
       transition: font-weight $trans;
     }
     a:hover {
@@ -142,7 +174,6 @@ main {
 }
 .main {
   @include col-styling($secondary-color);
-  border-width: 3px;
   margin-bottom: 15px;
   h1 {
     padding: 15px;

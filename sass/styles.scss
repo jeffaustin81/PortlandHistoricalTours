@@ -159,7 +159,7 @@ nav {
 }
 
 /*/////////////////////////////////////////////////////////////////////////
-MAIN | MAIN WRAPS THE MAIN CONTENT BELOW THE HEADER AND NAV SECTION
+MAIN | MAIN WRAPS THE MAIN CONTENT BELOW THE HEADER AND NAV SECTION INCLUDES CLASSES ON MAIN FOR DIFFERENT PAGES
 ////////////////////////////////////////////////////////////////////////*/
 
 main {
@@ -175,12 +175,20 @@ main {
 .main {
   @include col-styling($secondary-color);
   margin-bottom: 15px;
+  text-align: center;
   h1 {
     padding: 15px;
   }
   p {
+    text-align: left;
     padding: 15px;
     font-weight: $normal;
+  }
+  img {
+    filter: $drop-shadow sepia(5%);
+    margin-top: 10px;
+    height: 200px;
+    width: 250px;
   }
 }
 
@@ -214,9 +222,21 @@ THIS SECTION INCLUDES CHILDREN OF COLUMNS CLASS
     height: 200px;
     width: 200px;
     filter: $drop-shadow sepia(5%);
+    border-bottom: solid 1px $dark-color;
+    padding-bottom: 20px;
   }
   .col {
     margin-bottom: 10px;
+    p {
+      text-align: left;
+      margin-left: 10%;
+    }
+    blockquote {
+      padding: 10px;
+      text-align: left;
+      margin-left: 5%;
+      margin-bottom: 25px;
+    }
   }
   .col-1 {
     @include col-styling($downtown-color);
@@ -289,6 +309,18 @@ footer, .wrapper:after {
       font-size: 1.30rem;
     }
   }
+  .main {
+    img {
+      height: 300px;
+      width: 500px;
+      margin-top: 15px;
+    }
+    p {
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
 /*COLUMNS*/
   .columns {
     margin:30px;
@@ -299,6 +331,12 @@ footer, .wrapper:after {
       flex:1 1 auto;
       text-align:center;
       margin: 5px;
+      p {
+        font-size: 1rem;
+      }
+      blockquote {
+        font-size: 1rem;
+      }
     }
   }
 }

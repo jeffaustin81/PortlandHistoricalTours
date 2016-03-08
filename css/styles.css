@@ -18,6 +18,10 @@ html, body {
   height: 100%;
 }
 
+.clear {
+  clear: both;
+}
+
 /*////////////////////////////////////////////////////////////////////
 WRAPPER | IS THE MAIN DIV THAT WRAPS ALL CONTENT EXCLUDING THE FOOTER
 ////////////////////////////////////////////////////////////////////*/
@@ -100,7 +104,7 @@ nav ul .active {
 }
 
 /*/////////////////////////////////////////////////////////////////////////
-MAIN | MAIN WRAPS THE MAIN CONTENT BELOW THE HEADER AND NAV SECTION INCLUDES CLASSES ON MAIN FOR DIFFERENT PAGES
+MAIN | MAIN WRAPS THE MAIN CONTENT BELOW THE HEADER AND NAV, SECTION INCLUDES CLASSES ON MAIN FOR DIFFERENT PAGES
 ////////////////////////////////////////////////////////////////////////*/
 main {
   margin: 0 10%;
@@ -111,6 +115,9 @@ main h1 {
 main p {
   font-size: 1.10em;
   padding-bottom: 20px;
+}
+main label, main input {
+  text-align: left;
 }
 
 .main {
@@ -136,6 +143,53 @@ main p {
   margin-top: 10px;
   height: 200px;
   width: 250px;
+}
+
+.registration {
+  margin: 0 5%;
+  margin-bottom: 10%;
+  padding-bottom: 20px;
+  font-size: .75rem;
+  text-align: left;
+}
+.registration h1 {
+  text-align: center;
+}
+.registration form {
+  margin: 5px;
+}
+.registration .radio {
+  display: inline;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.registration label {
+  display: block;
+  float: left;
+  width: 10em;
+  padding-right: 5px;
+}
+.registration input {
+  display: block;
+  margin-bottom: 1em;
+}
+.registration textarea {
+  display: block;
+  margin-left: 10.5em;
+  margin-bottom: 1em;
+}
+.registration .comment-label {
+  width: 20em;
+  float: none;
+}
+.registration .tour-label {
+  float: none;
+  margin-bottom: 10px;
+}
+.registration button {
+  background-color: #3CD3AD;
+  color: #fff;
+  padding: 5px;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////
@@ -245,6 +299,14 @@ footer, .wrapper:after {
   height: 50px;
 }
 
+@media (min-width: 480px) {
+  .registration {
+    font-size: 1rem;
+  }
+  .registration form {
+    margin: 0 10%;
+  }
+}
 @media (min-width: 768px) {
   /*HEADER*/
   header {
@@ -304,6 +366,17 @@ footer, .wrapper:after {
     margin-right: 10%;
   }
 
+  .registration {
+    width: 70%;
+    margin-left: 15%;
+  }
+  .registration form {
+    margin: 0 15%;
+  }
+  .registration textarea {
+    margin-left: 10.5em;
+  }
+
   /*COLUMNS*/
   .columns {
     margin: 30px;
@@ -327,5 +400,11 @@ footer, .wrapper:after {
   }
   .columns .col blockquote {
     font-size: 1rem;
+  }
+}
+@media (min-width: 1080px) {
+  .registration {
+    width: 50%;
+    margin-left: 25%;
   }
 }

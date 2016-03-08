@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic,300,300italic,600,600italic,800,800italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>About</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <a href="index.html"><img class="logo" src="site-assets/Logo.png" alt="Logo Image" /></a>
+      <a href="index.html"><h1 class="title-header"><span class="bold">Portland</span></a> Historical Tours</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+    <main class="main registration">
+      <h1>Registration</h1>
+      <form class="" action="#" method="post">
+        <label class="tour-label" for="tour">Choose your tour: </label>
+
+        <input class="radio" type="radio" name="tour" id="tour"> Downtown
+        <input class="radio" type="radio" name="tour" id="tour"> Growth
+        <input class="radio" type="radio" name="tour" id="tour"> Landmarks
+        <br>
+        <br>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName">
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+
+        <label for="phone">Phone Number: </label>
+        <input type="tel" id="phone">
+
+        <label for="tourDate">Tour Date</label>
+        <input type="date" id="tourDate">
+
+        <label for="participants">Total Participants: </label>
+        <input type="number" min="1" max="10">
+
+        <label class="comment-label" for="comments">Does anyone in your party have food or drink sensitivities? If so, what are they?</label>
+        <br>
+        <textarea type="text" id="comments"></textarea>
+        <br>
+        <button type="sumbmit" name="button">Register</button>
+      </form>
+      <div class="clear"></div>
+    </main>
+  </div>
+  <footer>
+    <p>
+      Portland Historical Tours &copy; 2016
+    </p>
+  </footer>
+</body>
+
+</html>

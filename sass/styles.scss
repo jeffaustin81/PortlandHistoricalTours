@@ -49,33 +49,9 @@ QUERIES CAN BE FOUND AFTER THE INITIAL STYLES SECTION OF FOOTER NEAR BOTTOM OF D
 html, body {
   height: 100%;
 }
-// html {
-//   background: url(../site-assets/Portland_Historical_Tours.jpg) no-repeat center center fixed;
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-// }
-// body {
-//     position: absolute;
-//     top: 0; bottom: 0; left: 0; right: 0;
-//     height: 100%;
-// }
-// body:before {
-//     content: "";
-//     position: fixed;
-//     background: url(../site-assets/Portland_Historical_Tours.jpg);
-//     background-size: cover;
-//     -webkit-background-size: cover;
-//     -moz-background-size: cover;
-//     -o-background-size: cover;
-//     z-index: -1; /* Keep the background behind the content */
-//     height: 20%; width: 20%; /* Using Glen Maddern's trick /via @mente */
-//
-//     transform: scale(5);
-//     transform-origin: top left;
-//     filter: grayscale(100%) contrast(500%) opacity(.1);
-// }
+.clear {
+  clear: both;
+}
 
 /*////////////////////////////////////////////////////////////////////
 WRAPPER | IS THE MAIN DIV THAT WRAPS ALL CONTENT EXCLUDING THE FOOTER
@@ -159,7 +135,7 @@ nav {
 }
 
 /*/////////////////////////////////////////////////////////////////////////
-MAIN | MAIN WRAPS THE MAIN CONTENT BELOW THE HEADER AND NAV SECTION INCLUDES CLASSES ON MAIN FOR DIFFERENT PAGES
+MAIN | MAIN WRAPS THE MAIN CONTENT BELOW THE HEADER AND NAV, SECTION INCLUDES CLASSES ON MAIN FOR DIFFERENT PAGES
 ////////////////////////////////////////////////////////////////////////*/
 
 main {
@@ -170,6 +146,9 @@ main {
   p {
     font-size: 1.10em;
     padding-bottom: 20px;
+  }
+  label, input {
+    text-align: left;
   }
 }
 .main {
@@ -189,6 +168,53 @@ main {
     margin-top: 10px;
     height: 200px;
     width: 250px;
+  }
+}
+.registration {
+  margin: 0 5%;
+  margin-bottom: 10%;
+  padding-bottom: 20px;
+  // height: 100vh;
+  font-size: .75rem;
+  text-align: left;
+  h1 {
+    text-align: center;
+  }
+  form {
+    margin: 5px;
+  }
+  .radio {
+    display: inline;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  label {
+    display: block;
+    float: left;
+    width: 10em;
+    padding-right: 5px;
+  }
+  input {
+    display: block;
+    margin-bottom: 1em;
+  }
+  textarea {
+    display: block;
+    margin-left: 10.5em;
+    margin-bottom: 1em;
+  }
+  .comment-label {
+    width: 20em;
+    float: none;
+  }
+  .tour-label {
+    float: none;
+    margin-bottom: 10px;
+  }
+  button {
+    background-color: $landmark-color;
+    color: #fff;
+    padding: 5px;
   }
 }
 
@@ -276,6 +302,15 @@ footer, .wrapper:after {
   height: 50px;
 }
 
+@media (min-width: 480px) {
+  .registration {
+    font-size: 1rem;
+    form {
+      margin: 0 10%;
+    }
+  }
+}
+
 @media (min-width: 768px) {
 /*HEADER*/
   header {
@@ -321,6 +356,16 @@ footer, .wrapper:after {
       margin-right: 10%;
     }
   }
+  .registration {
+    width: 70%;
+    margin-left: 15%;
+    form {
+      margin: 0 15%;
+    }
+    textarea {
+      margin-left: 10.5em;
+    }
+  }
 /*COLUMNS*/
   .columns {
     margin:30px;
@@ -338,5 +383,11 @@ footer, .wrapper:after {
         font-size: 1rem;
       }
     }
+  }
+}
+@media (min-width: 1080px) {
+  .registration {
+    width: 50%;
+    margin-left: 25%;
   }
 }

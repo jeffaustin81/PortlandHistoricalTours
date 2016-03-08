@@ -169,12 +169,16 @@ main {
     height: 200px;
     width: 250px;
   }
+  .sign-up {
+    height: 60px;
+    width: 120px;
+    filter: none;
+  }
 }
 .registration {
   margin: 0 5%;
   margin-bottom: 10%;
   padding-bottom: 20px;
-  // height: 100vh;
   font-size: .75rem;
   text-align: left;
   h1 {
@@ -193,14 +197,16 @@ main {
     float: left;
     width: 10em;
     padding-right: 5px;
+    margin-bottom: 10px;
   }
   input {
     display: block;
     margin-bottom: 1em;
   }
   textarea {
+    width: 90%;
+    height: 6em;
     display: block;
-    margin-left: 10.5em;
     margin-bottom: 1em;
   }
   .comment-label {
@@ -214,7 +220,7 @@ main {
   button {
     background-color: $landmark-color;
     color: #fff;
-    padding: 5px;
+    padding: 5px 10px;
   }
 }
 
@@ -361,9 +367,6 @@ footer, .wrapper:after {
     margin-left: 15%;
     form {
       margin: 0 15%;
-    }
-    textarea {
-      margin-left: 10.5em;
     }
   }
 /*COLUMNS*/

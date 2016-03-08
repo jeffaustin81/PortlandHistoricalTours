@@ -144,6 +144,12 @@ main label, main input {
   height: 200px;
   width: 250px;
 }
+.main .sign-up {
+  height: 60px;
+  width: 120px;
+  -webkit-filter: none;
+  filter: none;
+}
 
 .registration {
   margin: 0 5%;
@@ -168,14 +174,16 @@ main label, main input {
   float: left;
   width: 10em;
   padding-right: 5px;
+  margin-bottom: 10px;
 }
 .registration input {
   display: block;
   margin-bottom: 1em;
 }
 .registration textarea {
+  width: 90%;
+  height: 6em;
   display: block;
-  margin-left: 10.5em;
   margin-bottom: 1em;
 }
 .registration .comment-label {
@@ -189,7 +197,7 @@ main label, main input {
 .registration button {
   background-color: #3CD3AD;
   color: #fff;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////
@@ -372,9 +380,6 @@ footer, .wrapper:after {
   }
   .registration form {
     margin: 0 15%;
-  }
-  .registration textarea {
-    margin-left: 10.5em;
   }
 
   /*COLUMNS*/

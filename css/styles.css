@@ -28,7 +28,7 @@ WRAPPER | IS THE MAIN DIV THAT WRAPS ALL CONTENT EXCLUDING THE FOOTER
 .wrapper {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -50px;
+  margin-bottom: -75px;
 }
 
 .wrapper:after {
@@ -297,16 +297,29 @@ footer {
   background-color: #4CB8C4;
   color: #FFF;
   font-size: .75em;
-  height: 50px;
+  height: 75px;
 }
 footer p {
   padding: 5px 0 0 5px;
 }
 
 footer, .wrapper:after {
-  height: 50px;
+  height: 75px;
 }
 
+.copy {
+  float: left;
+  margin-left: 10px;
+}
+
+.address {
+  float: right;
+  margin-right: 10px;
+}
+
+/*/////////////////////////////////////////////////
+MEDIA QUERIES
+////////////////////////////////////////////////*/
 @media (min-width: 480px) {
   .registration {
     font-size: 1rem;
